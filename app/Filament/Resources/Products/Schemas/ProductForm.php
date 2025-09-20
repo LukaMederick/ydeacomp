@@ -28,6 +28,11 @@ class ProductForm
                     ->relationship('category', 'name')
                     ->required(),
 
+                Select::make('brand_id')
+                    ->label('Marca')
+                    ->relationship('brand', 'name')
+                    ->required(),
+
                 Textarea::make('description')
                     ->label('Descripción')
                     ->columnSpanFull()
